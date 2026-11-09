@@ -38,6 +38,45 @@ lavora per la PA o per un'azienda italiana deve sapere anche:
 
 Queste skill lo sanno, con le fonti e la data dell'ultimo aggiornamento.
 
+## Un esempio reale
+
+A novembre 2026 il pacchetto è stato provato sul sito del Comune di
+Sant'Antioco (comune.santantioco.su.it), su due pagine: la home e una notizia.
+È un sito costruito bene, con il tema AgID basato su Bootstrap Italia, ed è
+proprio per questo un buon test: i problemi che restano sono quelli che gli
+strumenti automatici non vedono.
+
+**La scansione automatica trova un solo problema.** axe-core, lanciato nella
+pagina con le regole WCAG 2.1 AA, segnala solo il link del logo, che si chiama
+"Logo dell'ente" invece di "Comune di Sant'Antioco" (criteri 2.5.3 e 2.4.4).
+Per il resto è pulita: lingua dichiarata, link "Vai ai contenuti" funzionanti,
+alt su tutte le immagini.
+
+**Il test a 320 px ne trova uno grave.** A quella larghezza, che corrisponde
+allo zoom al 400%, la pagina scorre in orizzontale. Il motivo è la griglia
+"Siti tematici" (Albo Pretorio, PagoPA, Amministrazione Trasparente), con
+colonne fisse da 350 px. Chi ingrandisce il testo deve scorrere di lato per
+leggere ogni riga (criterio 1.4.10). La correzione è una riga di CSS:
+
+```css
+grid-template-columns: repeat(auto-fill, minmax(min(100%, 350px), 1fr));
+```
+
+**La dichiarazione di accessibilità si contraddice.** È stata redatta a
+settembre 2026 e dichiara il sito "parzialmente conforme" per onere
+sproporzionato, ma non elenca nessun contenuto non conforme né alternative
+accessibili. E non cita il problema di reflow, che c'è.
+
+**E una cosa che lo strumento sbagliava.** Il primo controllo del focus,
+fatto via script, dava 130 elementi su 130 senza indicatore visibile. Era
+falso: Bootstrap Italia mostra il focus solo dopo un tasto premuto davvero.
+Premendo Tab il focus si vede bene. Ora `/a11y-audit` dice di provarlo con la
+tastiera vera.
+
+Non è un audit completo dei 50 criteri e non include i test con screen
+reader, ma mostra il punto: una scansione pulita non è una pagina accessibile,
+e una dichiarazione si scrive dopo una verifica, non al posto di una verifica.
+
 ## Le skill
 
 | comando | cosa fa |
