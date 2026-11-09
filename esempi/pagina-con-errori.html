@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Comune</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 0; }
+    header { background: #2e8bc9; color: #fff; padding: 12px 16px; display: flex; justify-content: space-between; }
+    .nota { color: #9a9a9a; }
+    .card { border: 1px solid #eee; padding: 12px; margin: 8px 0; cursor: pointer; }
+    .tabella { width: 900px; border-collapse: collapse; }
+    .tabella td { border: 1px solid #ccc; padding: 4px; }
+    a:focus, button:focus { outline: none; }
+    .err { border-color: red; }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="stemma.png">
+    <button onclick="apriMenu()"><svg width="16" height="16"><path d="M0 2h16v2H0zM0 7h16v2H0zM0 12h16v2H0z"/></svg></button>
+  </header>
+
+  <div class="contenuto">
+    <div class="h1" style="font-size:2em;font-weight:bold">Servizi online</div>
+    <p class="nota">Ultimo aggiornamento: 9 novembre 2026</p>
+
+    <div class="card" onclick="location.href='/residenza'">Cambio di residenza</div>
+    <div class="card" onclick="location.href='/tari'">Pagamento TARI</div>
+    <p>Per le delibere <a href="/delibere.pdf">clicca qui</a>.</p>
+
+    <h3>Bandi aperti</h3>
+    <table class="tabella">
+      <tr><td><b>Bando</b></td><td><b>Scadenza</b></td><td><b>Ufficio</b></td></tr>
+      <tr><td>Contributi affitto 2026</td><td>15/12/2026</td><td>Servizi sociali</td></tr>
+    </table>
+
+    <h3>Richiedi informazioni</h3>
+    <form>
+      <input type="text" placeholder="Nome">
+      <input type="text" placeholder="Codice fiscale" class="err">
+      <input type="email" placeholder="Email" autocomplete="off">
+      <select><option>Anagrafe</option><option>Tributi</option></select>
+      <div class="card" onclick="invia()">Invia</div>
+    </form>
+  </div>
+  <script>function apriMenu(){} function invia(){}</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "a11y-agent-italia",
+  "description": "Sette skill per Claude che portano un frontend italiano alla conformità di accessibilità: audit del codice e delle pagine contro le WCAG 2.1 AA richieste da AgID, correzioni per React e HTML, test manuali guidati con tastiera e screen reader, test automatici in CI, dichiarazione di accessibilità e informazioni EAA, uso corretto di Bootstrap Italia e design-react-kit, e gap analysis verso le WCAG 2.2.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Jacopo Marini",
+    "url": "https://github.com/JacopoMarini"
+  },
+  "repository": "https://github.com/JacopoMarini/a11y-agent-italia",
+  "license": "MIT",
+  "keywords": ["accessibilità", "wcag", "agid", "pubblica amministrazione", "european accessibility act", "en 301 549", "bootstrap italia", "react", "italiano"]
+}

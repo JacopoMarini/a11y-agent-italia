@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "a11y-agent-italia",
+  "description": "Il pacchetto di skill per l'accessibilità digitale italiana, per Claude",
+  "owner": {
+    "name": "Jacopo Marini",
+    "url": "https://github.com/JacopoMarini"
+  },
+  "plugins": [
+    {
+      "name": "a11y-agent-italia",
+      "description": "Sette skill per portare siti e app alla conformità AgID ed EAA: audit, correzioni, test manuali e automatici, dichiarazione di accessibilità, Bootstrap Italia, WCAG 2.2.",
+      "source": "./",
+      "category": "development"
+    }
+  ]
+}
