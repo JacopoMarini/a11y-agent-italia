@@ -1,5 +1,9 @@
 # A11y Agent Italia
 
+[![npm](https://img.shields.io/npm/v/a11y-agent-italia.svg)](https://www.npmjs.com/package/a11y-agent-italia)
+[![Licenza: MIT](https://img.shields.io/badge/licenza-MIT-blue.svg)](LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/JacopoMarini/a11y-agent-italia?style=social)](https://github.com/JacopoMarini/a11y-agent-italia/stargazers)
+
 Sette skill per Claude che portano un sito o un'app **alla conformità di
 accessibilità richiesta in Italia**: Legge 4/2004 per la PA e le grandi
 imprese, European Accessibility Act per e-commerce, banche, trasporti e gli
@@ -118,6 +122,13 @@ Oppure come plugin:
 ```
 /plugin marketplace add JacopoMarini/a11y-agent-italia
 /plugin install a11y-agent-italia
+```
+
+Oppure con la [CLI skills](https://skills.sh), che le installa anche per Cursor,
+Codex e gli altri agenti:
+
+```bash
+npx skills add JacopoMarini/a11y-agent-italia
 ```
 
 Copia sempre tutte le cartelle insieme: alcune skill leggono i file delle altre.
