@@ -1,0 +1,22 @@
+name: Aggiornamento normativo
+description: Una norma, una scadenza o una linea guida è cambiata
+labels: ["normativa"]
+body:
+  - type: textarea
+    id: cosa
+    attributes:
+      label: Cosa è cambiato
+      description: In due o tre frasi.
+    validations:
+      required: true
+  - type: input
+    id: fonte
+    attributes:
+      label: Fonte
+      description: Link a AgID, Gazzetta ufficiale, ETSI, Commissione UE o a un articolo autorevole.
+    validations:
+      required: true
+  - type: input
+    id: data
+    attributes:
+      label: Da quando vale

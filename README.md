@@ -87,11 +87,18 @@ e una dichiarazione si scrive dopo una verifica, non al posto di una verifica.
 | `/a11y-ci` | jest-axe, vitest-axe, Playwright o Cypress con axe, e i job per GitHub Actions e Azure DevOps. Con una strategia per il debito che non spegne le regole. |
 | `/a11y-dichiarazione` | Capisce il regime, prepara la dichiarazione di accessibilità, gli obiettivi annuali, le informazioni EAA, il meccanismo di feedback e l'eventuale onere sproporzionato. |
 | `/a11y-design-italia` | Bootstrap Italia e design-react-kit: contrasto dei temi personalizzati, icone dello sprite, migrazione dalla versione 1 alla 2, componenti rifatti in casa. |
-| `/a11y-wcag22` | Gap analysis verso le WCAG 2.2 adottate dalla EN 301 549 v4.1.1: i sei criteri nuovi, dove cercarli, quanto costa sistemarli. |
+| `/a11y-wcag22` | Gap analysis verso la EN 301 549 v4.1.1: i sei criteri nuovi delle WCAG 2.2 e le preferenze dell'utente della clausola 9.7, dove cercarli, quanto costa sistemarli. |
 
 ## Installazione
 
-Incolla questo in Claude:
+Con npm, in Claude Code:
+
+```bash
+npx a11y-agent-italia installa             # in ~/.claude/skills, per tutti i progetti
+npx a11y-agent-italia installa --progetto  # in .claude/skills del progetto corrente
+```
+
+Oppure incolla questo in Claude:
 
 ```
 https://github.com/JacopoMarini/a11y-agent-italia
@@ -117,7 +124,15 @@ Copia sempre tutte le cartelle insieme: alcune skill leggono i file delle altre.
 
 ### Lo script di scansione
 
-Serve Node 18 o successivo:
+Serve Node 18 o successivo. Dal pacchetto npm, che porta con sé axe-core e
+Playwright:
+
+```bash
+npm i -D a11y-agent-italia && npx playwright install chromium
+npx a11y-scansiona http://localhost:3000 --out report-a11y
+```
+
+Oppure dalle skill già copiate:
 
 ```bash
 npm i -D playwright axe-core && npx playwright install chromium
@@ -131,7 +146,7 @@ codice 1 se trova violazioni.
 
 ## Il quadro normativo, in breve
 
-Aggiornato al 9 novembre 2026. Il dettaglio, con le fonti, è in
+Aggiornato al 19 novembre 2026. Il dettaglio, con le fonti, è in
 [`skills/a11y-dichiarazione/riferimenti.md`](skills/a11y-dichiarazione/riferimenti.md).
 
 - **Riferimento tecnico oggi**: WCAG 2.1 livelli A e AA, tramite la EN 301 549
@@ -144,8 +159,11 @@ Aggiornato al 9 novembre 2026. Il dettaglio, con le fonti, è in
   38/2026, con quattro schede di controllo; microimprese escluse; sanzioni da
   5.000 a 40.000 euro, fino al 5% del fatturato sopra i 500 milioni.
 - **In arrivo**: la EN 301 549 v4.1.1, pubblicata da ETSI il 2 settembre 2026,
-  adotta le WCAG 2.2 AA. Diventa il riferimento dopo la citazione nella
-  Gazzetta ufficiale UE e il recepimento di AgID.
+  adotta le WCAG 2.2 AA e porta sul web i requisiti sulle preferenze
+  dell'utente (clausola 9.7: dimensione del testo, zoom, colori forzati).
+  Diventa il riferimento dopo la citazione nella Gazzetta ufficiale UE, attesa
+  fra fine novembre e metà dicembre 2026, e il recepimento di AgID.
+  `/a11y-wcag22` fa la gap analysis su entrambe le novità.
 
 Le skill controllano la data di questo quadro e, se è vecchia, cercano le fonti
 ufficiali prima di rispondere.
@@ -166,4 +184,6 @@ ufficiali prima di rispondere.
 ## Licenza
 
 MIT. Contributi benvenuti, soprattutto da chi lavora con l'accessibilità nella
-PA: errori tipici, casi reali, aggiornamenti normativi con la fonte.
+PA: errori tipici, casi reali, aggiornamenti normativi con la fonte. Come
+contribuire è spiegato in [`CONTRIBUTING.md`](CONTRIBUTING.md); le novità di
+ogni versione sono in [`CHANGELOG.md`](CHANGELOG.md).
