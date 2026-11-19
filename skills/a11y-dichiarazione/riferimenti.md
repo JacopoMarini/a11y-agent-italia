@@ -1,6 +1,6 @@
 # Riferimenti normativi
 
-Aggiornati al **9 novembre 2026**. Le norme sull'accessibilità cambiano spesso:
+Aggiornati al **19 novembre 2026**. Le norme sull'accessibilità cambiano spesso:
 se questa data ha più di sei mesi, o se l'utente cita qualcosa che qui non c'è,
 **cerca la fonte ufficiale prima di rispondere** e dillo all'utente.
 
@@ -78,16 +78,36 @@ obblighi EAA per i servizi bancari ai consumatori.
 
 ## In arrivo: WCAG 2.2
 
-ETSI ha pubblicato la **EN 301 549 v4.1.1** il 2 settembre 2026. Adotta le WCAG
-2.2 livello AA, con sei criteri nuovi. Diventa norma armonizzata, con
-presunzione di conformità per l'EAA, solo quando viene citata nella Gazzetta
-ufficiale dell'UE; a settembre 2026 la citazione era attesa per fine novembre
-2026. Il passaggio delle Linee guida AgID alla nuova versione richiede un
-aggiornamento di AgID.
+ETSI, CEN e CENELEC hanno adottato la **EN 301 549 v4.1.1** il 24 agosto 2026
+e l'hanno pubblicata il 2 settembre 2026. Rispetto alla v3.2.1:
+
+- **WCAG 2.2 AA** al posto delle 2.1 per web (clausola 9), documenti non web
+  (10) e software (11): sei criteri nuovi, e il 4.1.1 Parsing tolto.
+- **Preferenze dell'utente** riscritte e distribuite su 9.7 (web), 10.7
+  (documenti) e 11.7 (software), mentre prima c'era solo la 11.7. Per il web
+  vuol dire rispettare le impostazioni di piattaforma e browser: dimensione del
+  testo, zoom, colori e contrasto forzati, tema scuro. Non fanno parte delle
+  WCAG e axe non le controlla.
+- **Allegato ZB**, che collega i requisiti della norma a quelli dell'EAA.
+- Requisiti sul testo in tempo reale (RTT) ampliati, e quelli sugli strumenti
+  di authoring spostati nella clausola 5.
+
+**Stato al 19 novembre 2026: non ancora citata nella Gazzetta ufficiale
+dell'UE.** Finché non lo è, il riferimento resta la v3.2.1 con le WCAG 2.1, sia
+per la Direttiva 2016/2102 (PA) sia per le Linee guida AgID sull'EAA; e sotto
+l'EAA nessuna versione della norma dà ancora presunzione di conformità. Le
+stime per la citazione vanno da fine novembre a metà dicembre 2026. ETSI ha
+fissato il 30 novembre 2026 per l'annuncio nazionale, il 31 maggio 2027 per la
+pubblicazione nazionale e il 31 maggio 2028 per il ritiro delle norme nazionali
+in conflitto. Dopo la citazione serve comunque l'aggiornamento delle Linee
+guida AgID e delle schede di controllo.
 
 Finché non lo verifichi con una ricerca, scrivi: "Il riferimento obbligatorio
-resta WCAG 2.1 AA; la EN 301 549 v4.1.1 con le WCAG 2.2 è stata pubblicata e
-va considerata in arrivo." Per prepararsi: `/a11y-wcag22`.
+resta WCAG 2.1 AA tramite la EN 301 549 v3.2.1; la v4.1.1 con le WCAG 2.2 è
+pubblicata e la sua citazione nella Gazzetta ufficiale UE è attesa a breve."
+Se la ricerca trova la citazione, dillo con la data e la fonte, e tratta i
+criteri 2.2 come requisiti a partire da quando AgID aggiorna le Linee guida.
+Per prepararsi: `/a11y-wcag22`.
 
 ## Fonti
 
@@ -99,4 +119,7 @@ va considerata in arrivo." Per prepararsi: `/a11y-wcag22`.
 - AccessibilitaDigitale.com, [Linee Guida AgID accessibilità servizi marzo 2026: cosa è cambiato](https://accessibilitadigitale.com/linee-guida-agid-accessibilita-servizi/)
 - FiscoeTasse, [Accessibilità dei servizi digitali: nuovo regolamento AgID 2026](https://www.fiscoetasse.com/new-rassegna-stampa/4022-accessibilita-servizi-digitali-nuovo-regolamento-agid-2026.html)
 - Deque, [EN 301 549 v4.1.1 is final](https://www.deque.com/blog/en-301-549-v4-1-1-is-final-what-changed-what-it-means-and-what-you-should-do/)
+- Hidde de Vries (membro del gruppo di lavoro), [New EN 301 549 adopted](https://hidde.blog/links/new-en-301-549-adopted/)
+- Accessibility Pro, [EN 301 549 explained](https://www.accessibilitypro.app/compliance/en-301-549) (date ETSI di recepimento)
+- Accessibility.build, [EN 301 549 checklist](https://accessibility.build/checklists/en-301-549) (stato della citazione)
 - Moduli AgID per dichiarazioni e obiettivi: https://form.agid.gov.it

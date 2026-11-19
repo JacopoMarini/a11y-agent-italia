@@ -1,0 +1,23 @@
+name: Risposta sbagliata di una skill
+description: Una skill ha dato un'indicazione errata o incompleta
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: skill
+    attributes:
+      label: Skill
+      options: [a11y-audit, a11y-correggi, a11y-test-manuale, a11y-ci, a11y-dichiarazione, a11y-design-italia, a11y-wcag22, script di scansione, CLI npm]
+    validations:
+      required: true
+  - type: textarea
+    id: prompt
+    attributes:
+      label: Cosa hai chiesto
+    validations:
+      required: true
+  - type: textarea
+    id: risposta
+    attributes:
+      label: Cosa ha risposto, e cosa ti aspettavi
+    validations:
+      required: true

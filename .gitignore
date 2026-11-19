@@ -3,3 +3,8 @@ __pycache__/
 *.pyc
 .venv/
 *.tmp
+node_modules/
+.tmp-test/
+*.tgz
+a11y-report/
+package-lock.json

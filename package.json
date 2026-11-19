@@ -1,0 +1,55 @@
+{
+  "name": "a11y-agent-italia",
+  "version": "1.1.0",
+  "description": "Skill per Claude sull'accessibilità digitale italiana: audit WCAG 2.1 AA con report in italiano, correzioni, test manuali, CI, dichiarazione AgID, Bootstrap Italia e gap analysis verso la EN 301 549 v4.1.1 (WCAG 2.2).",
+  "type": "module",
+  "bin": {
+    "a11y-agent-italia": "bin/cli.mjs",
+    "a11y-scansiona": "skills/a11y-audit/scansiona.mjs"
+  },
+  "files": [
+    "bin/",
+    "skills/",
+    "esempi/",
+    ".claude-plugin/",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "axe-core": "^4.14.1",
+    "playwright": "^1.65.1"
+  },
+  "scripts": {
+    "test": "node bin/cli.mjs installa --dest ./.tmp-test && node -e \"require('fs').rmSync('./.tmp-test',{recursive:true})\"",
+    "prepublishOnly": "npm test"
+  },
+  "keywords": [
+    "accessibilita",
+    "accessibility",
+    "a11y",
+    "wcag",
+    "wcag22",
+    "agid",
+    "pubblica-amministrazione",
+    "european-accessibility-act",
+    "en-301-549",
+    "bootstrap-italia",
+    "claude",
+    "claude-code",
+    "skills",
+    "italiano"
+  ],
+  "author": "Jacopo Marini (https://github.com/JacopoMarini)",
+  "license": "MIT",
+  "homepage": "https://github.com/JacopoMarini/a11y-agent-italia#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JacopoMarini/a11y-agent-italia.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JacopoMarini/a11y-agent-italia/issues"
+  }
+}

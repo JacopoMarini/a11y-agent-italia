@@ -1,0 +1,19 @@
+name: Caso reale o errore tipico
+description: Un problema di accessibilità visto sul campo, da insegnare alle skill
+labels: ["caso reale"]
+body:
+  - type: textarea
+    id: problema
+    attributes:
+      label: Il problema
+      description: Componente, sito o documento, e chi resta bloccato. Niente dati personali.
+    validations:
+      required: true
+  - type: input
+    id: criterio
+    attributes:
+      label: Criterio WCAG o clausola EN 301 549
+  - type: textarea
+    id: correzione
+    attributes:
+      label: Come si corregge
